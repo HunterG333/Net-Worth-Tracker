@@ -1,0 +1,100 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+div.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+div.space {
+    padding: 10px;
+}
+
+div.solidBack {
+    background-color: white;
+}
+
+#netWorthChart {
+    width: 100%;  /* This will make the canvas take up the full width of its parent */
+    height: 60vh; /* This will make the canvas height 50% of the viewport height */
+}
+
+#netWorthValue {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    color: green;
+}
+
+
+h3,h2,h1 {
+    color: #333;
+    font-size: 28px;
+}
+
+h3.center, h2.center, h1.center{
+    text-align: center;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+form.standardForm {
+    /* Center the form */
+    margin: 0 auto;
+    width: 50%; /* Adjust this value to change the width of the form */
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box; /* This makes the padding included in the element's total width and height */
+}
+
+form.standardForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form.standardForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* This makes the padding included in the element's total width and height */
+}
+
+form.standardForm input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+a.btn-primary {
+    background-color: #007BFF;
+    color: white;
+}
+
+a.btn-logout {
+    background-color: #134BFF;
+    color: white;
+}
+
+a.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+a.btn-logout:hover {
+    background-color: #0056b3;
+}
+

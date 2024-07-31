@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">>
+<head>
+    <meta charset="UTF-8">
+    <title>Create Profile</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<h1 class="center">Please fill out your profile information</h1>
+
+<div sec:authorize="isAuthenticated()">
+    <form class="standardForm" th:action="@{/updateProfile}" method="post">
+
+
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+        <label for="name">First Name</label>
+        <input id="name" name="name">
+
+        <label for="date">Date of Birth</label>
+        <input type="date" id="date" name="date">
+
+        <input type="submit" value="Submit">
+
+    </form>
+</div>
+
+</body>
+</html>

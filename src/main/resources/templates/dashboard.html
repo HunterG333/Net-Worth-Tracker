@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h2 class="center">Welcome, <span th:text="${name}"></span></h2>
+<h3 id="netWorthValue">$<span th:text="${#numbers.formatDecimal(netWorth, 0, 'COMMA', 2, 'POINT')}"></span></h3>
+
+
+<div class="center">
+    <div class="solidBack">
+        <canvas id="netWorthChart" class="center"></canvas>
+    </div>
+    <div class="space">
+        <a th:href="@{/financeForm}" class="btn btn-primary">Input a new entry</a>
+    </div>
+    <div class="space">
+        <a th:href="@{/logout}" class="btn btn-logout">Log Out</a>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    let financialData = /*[[${financialData}]]*/ 'default';
+    /*]]>*/
+</script>
+<script src="/jss/graph.js"></script>
+
+</body>
+</html>
